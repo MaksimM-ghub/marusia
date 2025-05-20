@@ -1,0 +1,98 @@
+.about-film {
+  &__title {
+    margin: 0;
+    margin-bottom: 64px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    color: #fff;
+
+    @media (max-width: 576px) {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 555px;
+
+    @media (max-width: 576px) {
+      gap: 8px;
+    }
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: -1ex;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: unset;
+    }
+  }
+
+  &__prop {
+    margin: 0;
+    margin-right: -50%;
+    width: 100%;
+    vertical-align: top;
+    overflow: hidden;
+    display: inline-block;
+    letter-spacing: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    color: #fff;
+
+    @media (max-width: 576px) {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 143%;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__prop::after {
+    content: "";
+    display: inline-block;
+    width: 90%;
+    margin: 0 -99% 0 3px;
+    vertical-align: baseline;
+    border-bottom: 1px dashed white;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  &__value {
+    margin: 0;
+    display: inline-block;
+    letter-spacing: normal;
+    padding-left: 3px;
+    margin-left: 50%;
+    width: 100%;
+    vertical-align: bottom;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    color: #fff;
+
+    @media (max-width: 576px) {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

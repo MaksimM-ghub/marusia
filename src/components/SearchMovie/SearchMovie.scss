@@ -1,0 +1,130 @@
+.header {
+  &__input-wrapper {
+    position: relative;
+    width: 100%;
+
+    @media (max-width: 920px) {
+      position: absolute;
+      z-index: 1000;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 97%;
+    }
+
+    &:hover .header__input-icon svg {
+      fill: #8400ff;
+      transform: scale(1.2);
+    }
+  }
+
+  &__input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+  }
+
+  &__input-icon svg {
+    fill: white;
+    transition:
+      fill 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+  }
+
+  &__input {
+    border-radius: 8px;
+    padding: 12px 12px 12px 52px;
+    width: 100%;
+    height: 48px;
+    background: #393b3c;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 133%;
+      color: rgba(255, 255, 255, 0.5);
+      transition: 0.3s ease-in-out color;
+    }
+
+    &:focus {
+      outline: 2px solid #8400ff;
+    }
+
+    &:hover {
+      background: #2f2f2f;
+    }
+
+    &:active {
+      color: white;
+      outline: 2px solid #8400ff;
+    }
+  }
+
+  &__login {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 133%;
+    color: #fff;
+  }
+
+  // &__input-close {
+  //   position: absolute;
+  //   top: 50%;
+  //   right: 10px;
+  //   transform: translateY(-50%);
+
+  //   & svg {
+  //     fill: white;
+  //   }
+  // }
+
+  &__input-close {
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    width: 23px;
+    height: 15px;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: white;
+      transition: 0.3s ease;
+      transform-origin: center;
+      opacity: 0;
+    }
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%) rotate(0);
+    }
+
+    &::after {
+      top: 50%;
+      transform: translateY(-50%) rotate(0);
+    }
+
+    &.open::before {
+      transform: translateY(-50%) rotate(45deg);
+      opacity: 1;
+    }
+
+    &.open::after {
+      transform: translateY(-50%) rotate(-45deg);
+      opacity: 1;
+    }
+  }
+}

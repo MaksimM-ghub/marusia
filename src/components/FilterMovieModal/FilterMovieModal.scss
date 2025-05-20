@@ -1,0 +1,141 @@
+.filter-movie {
+  &__wrapper {
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    right: 0;
+    display: flex;
+    border-radius: 8px;
+    padding: 8px;
+    width: 559px;
+    min-height: 150px;
+    background: #393b3c;
+
+    &.fade-enter {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
+    &.fade-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition:
+      opacity 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
+    }
+
+    &.fade-exit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &.fade-exit-active {
+      opacity: 0;
+      transform: translateY(-100%);
+      transition:
+      opacity 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
+    }
+
+    @media (max-width: 920px) {
+      width: 100%;
+      padding: 24px 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    gap: 16px;
+    padding: 20px 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out all;
+
+    &:hover {
+      background: #6a6a6a;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 920px) {
+      width: 200px;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  &__img,
+  &__poster {
+    width: 40px;
+    height: 52px;
+
+    @media (max-width: 920px) {
+      width: 158px;
+      height: 206px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    @media (max-width: 920px) {
+      gap: 5px;
+    }
+  }
+
+  &__rating {
+    padding: 2px 8px 2px 22px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 133%;
+    color: #fff;
+    border-radius: 16px;
+    background: url("../../assets/images/star.svg");
+    background-position: left 8px center;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+  }
+
+  &__year,
+  &__genre,
+  &__time {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 133%;
+    color: #fff;
+  }
+
+  &__error {
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    color: #fff;
+    align-self: center;
+    text-align: center;
+  }
+}

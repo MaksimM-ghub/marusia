@@ -1,0 +1,42 @@
+.footer {
+  padding: 40px 0;
+}
+
+.social {
+  &__list {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (max-width: 576px) {
+      justify-content: flex-start;
+    }
+  }
+  &__item {
+    & svg rect {
+      stroke: white;
+      transition: all 0.4s linear;
+    }
+
+    & svg path {
+      fill: white;
+      transition: all 0.4s linear;
+    }
+
+    &:hover svg rect {
+      stroke: purple;
+    }
+
+    &:hover svg path {
+      fill: purple;
+    }
+  }
+
+  &__link {
+    &:focus svg rect {
+      fill: purple;
+      stroke: purple;
+    }
+  }
+}

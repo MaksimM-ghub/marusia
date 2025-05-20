@@ -1,0 +1,76 @@
+.profile {
+  &__title {
+    margin: 0;
+    margin-bottom: 64px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 117%;
+    color: #fff;
+
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+  }
+
+  &__section {
+    display: flex;
+    gap: 64px;
+    margin-bottom: 76px;
+    
+    @media (max-width: 576px) {
+      gap: 24px;
+    }
+  }
+
+  &__section-link {
+    position: relative;
+    padding-left: 32px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 133%;
+    color: #fff;
+    transition: 0.3s ease-in-out all;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 3px;
+      background: rgb(107, 7, 107);
+      opacity: 0;
+    }
+
+    &:focus {
+      color: #8400ff;
+    }
+
+    &:hover {
+      color: rgb(107, 7, 107);
+    }
+
+    &.active::after {
+      opacity: 1;
+    }
+
+    &.active {
+      color: white;
+    }
+  }
+
+  &__section-link:nth-child(1) {
+    background: url("../../assets/images/favorites.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+  }
+
+  &__section-link:nth-child(2) {
+    background: url("../../assets/images/user.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+  }
+}

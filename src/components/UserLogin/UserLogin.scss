@@ -1,0 +1,15 @@
+.header__login {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: #fff;
+  transition:  0.3s ease-in-out color;
+
+  &:focus {
+    color: #8400ff;
+  }
+
+  &:hover {
+    color: rgb(107, 7, 107);
+  }
+}

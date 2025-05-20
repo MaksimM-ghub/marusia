@@ -1,0 +1,49 @@
+.form-field {
+  position: relative;
+  width: 100%;
+  transition: 0.3s ease-in-out all;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &:last-child {
+    margin-bottom: 24px;
+  }
+}
+
+.error .form-field__error-text {
+  color: red;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.error .auth-form__input::placeholder {
+  color: red;
+}
+
+.error .auth-form__input {
+  border: 2px solid red;
+}
+
+.error .auth-form__icon svg {
+  fill: red;
+  fill-opacity: 1;
+}
+
+.error:hover .auth-form__icon svg {
+  fill: red;
+  fill-opacity: 1;
+}
+
+.error .auth-form__icon--email {
+  transform: translateY(-45%);
+}
+
+.error .auth-form__icon--name {
+  transform: translateY(-45%);
+}
+
+.error .auth-form__icon--password {
+  transform: translateY(-45%);
+}

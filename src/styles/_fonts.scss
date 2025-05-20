@@ -1,0 +1,5 @@
+@use './mixins/font-face' as font;
+
+@include font.font-face("Play", "../assets/fonts/Play-Regular", 400, normal);
+@include font.font-face("Play", "../assets/fonts/Play-Bold", 700, normal);
+
