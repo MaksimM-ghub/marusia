@@ -19,12 +19,12 @@ export const FavoritesFilm = () => {
     case "pending":
       return <Loader />;
     case "error":
-      return <div className="favorites">Не удалось загрузить данные</div>;
+      return <div className="favorites__not-films">Не удалось загрузить данные</div>;
     case "success":
       if (!data || data.length === 0) {
         return (
           <div className="favorites">
-            <p>Фильмы не добавлены в избранное</p>
+            <p className="favorites__not-films">Фильмы не добавлены в избранное</p>
           </div>
         );
       }
