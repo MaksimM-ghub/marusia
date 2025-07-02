@@ -1,5 +1,5 @@
 # Приложение Онлайн Кинотеатр Маруся 
-[Макет](https://www.figma.com/design/8FW6Yt3ztcoYATQhqiy4qK/Макет-VK-Маруся-для-диплома-Vue%2FReact?node-id=0-1&node-type=canvas)
+[Макет](https://www.figma.com/design/8FW6Yt3ztcoYATQhqiy4qK/Макет-VK-Маруся-для-диплома-Vue%2FReact?node-id=0-1&node-type=canvas) <br />
 [Приложение](https://marusia-online.vercel.app/)
 
 ## Главная страница
